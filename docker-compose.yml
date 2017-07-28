@@ -1,0 +1,33 @@
+
+#  web:
+#    build:.
+#    command: node bin/ww
+#    volumes:
+#      - .:/usr/app/
+#      - /usr/app/node_modules
+#    ports:
+#      - "3000:3000"
+#    links:
+#       - db
+#     environment:
+#       PORT: 3000
+#  db:
+#    image: mongo
+#    ports:
+#      - "27017:27017"
+db:
+  image: mongo
+  ports:
+    - "27017:27017"
+web:
+  build: .
+  command: node bin/www
+  volumes:
+     - .:/usr/app/
+     - /usr/app/node_modules
+  ports:
+    - "3000:3000"
+  links:
+    - db
+  environment:
+    PORT: 3000
