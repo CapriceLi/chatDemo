@@ -1,3 +1,4 @@
 {
-  "dbUrl" : "mongodb:27017/admin"
+  // "dbUrl" : "mongodb:27017/admin"
+  "dbUrl" : "mongodb://172.31.160.166/ava"
 }
