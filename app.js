@@ -10,7 +10,7 @@ var users = require('./routes/users');
 
 var db_config = require('./config/db.json');
 var mongoose = require('mongoose');
-//mongoose.connect(db_config.dbUrl);
+mongoose.connect(db_config.dbUrl);
 
 var app = express();
 
